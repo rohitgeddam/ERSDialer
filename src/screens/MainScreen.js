@@ -75,6 +75,24 @@ const list = [
 
 
 export default class MainScreen extends React.Component{
+
+
+
+    static navigationOptions = {
+        title: 'ERS-DIALER',
+        headerTitleStyle: { flex: 1, textAlign: 'center'},
+        /* No more header config here! */
+        // headerStyle: {
+        //     backgroundColor: '#f4511e',
+        //   },
+        //   headerTintColor: '#fff',
+        //   headerTitleStyle: {
+        //     fontWeight: 'bold',
+        //   },
+      };
+    
+      /* render function, etc */
+    
     state = {
         search: '',
       };
@@ -86,11 +104,13 @@ export default class MainScreen extends React.Component{
         const {search} = this.state;
 
         return(
-            <ThemeProvider theme={theme}>
-                <Header
+
+            <View style={{flex:1}}>
+                 <ThemeProvider theme={theme}>
+                {/* <Header
                    
                     centerComponent={{ text: 'ERS-Dialer', style: { color: "#fff",fontSize:20} }}
-                />
+                /> */}
 
                 <View
                 style={{ flex: 1, alignItems: 'stretch', height:100}}>
@@ -138,6 +158,10 @@ export default class MainScreen extends React.Component{
                  </LinearGradient>
                 </View>
             </ThemeProvider>
+
+
+            </View>
+           
           
         )
     }

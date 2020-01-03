@@ -4,6 +4,10 @@ import {LinearGradient} from 'expo-linear-gradient'
 import { ThemeProvider ,Button,SearchBar,ListItem} from 'react-native-elements'
 import {Header} from 'react-native-elements'
 import TouchableScale from 'react-native-touchable-scale';
+
+
+import FontAwesome from 'react-native-vector-icons/FontAwesome'
+
 const list = [
    
     
@@ -11,6 +15,45 @@ const list = [
 
 
 export default class SearchServerScreen extends React.Component{
+
+  // static navigationOptions = ({ navigation }) =>{
+  //   const params = navigation.state.params || {};
+
+  //   return{
+  //     headerRight: () => (
+  //       <Button
+  //         onPress={()=>navigation.navigate('MyModal')}
+  //         title="ADD"
+  //         color={Platform.OS === 'ios' ? '#fff' : null}
+        
+  //       />
+  //     )
+  //   }
+
+
+  // }
+  static navigationOptions = ({ navigation, navigationOptions }) => {
+    const { params } = navigation.state;
+    let IconComponent = FontAwesome;
+    return {
+      title: "SEARCH",
+      headerTitleStyle: { flex: 1, textAlign: 'center'},
+      headerRight: () =>(
+        <Button
+        type="clear"
+        
+        icon={
+          <IconComponent name="user-plus" size={25} color="#fff"/>
+        }
+        onPress={() => navigation.navigate('MyModal')}
+        
+       />
+      )
+
+      /* These values are used instead of the shared configuration! */
+    };
+  };
+
     state = {
         search: '',
       };
@@ -19,14 +62,25 @@ export default class SearchServerScreen extends React.Component{
         this.setState({ search });
       };
     render(){
+
+
+      const { params } = this.props.navigation.state;
+      const itemId = params ? params.itemId : null;
+      const otherParam = params ? params.otherParam : null;
         const {search} = this.state;
 
         return(
             <ThemeProvider theme={theme}>
-                <Header
-                   
+                {/* <Header
+                    rightComponent={
+                      <Button
+                      onPress={()=>this.props.navigation.navigate('MyModal')}
+                      title="ADD"
+                      color="#fff"
+                    
+                      />}
                     centerComponent={{ text: 'SEARCH', style: { color: "#fff",fontSize:20} }}
-                />
+                /> */}
 
                 <View
                 style={{ flex: 1, alignItems: 'stretch', height:100}}>
@@ -81,20 +135,20 @@ export default class SearchServerScreen extends React.Component{
 
 
 const theme = {
-    Header: {
-        backgroundColor:"#192f6a"
-    },
-    SearchBar:{
-       inputContainerStyle:{
-           backgroundColor:"#fff",
-       },
-       containerStyle:{
-        backgroundColor:"#192f6a"
-       }
-    },
-    ListItem:{
-        bottomDivider:true
-    }
+    // Header: {
+    //     backgroundColor:"#192f6a"
+    // },
+    // SearchBar:{
+    //    inputContainerStyle:{
+    //        backgroundColor:"#fff",
+    //    },
+    //    containerStyle:{
+    //     backgroundColor:"#192f6a"
+    //    }
+    // },
+    // ListItem:{
+    //     bottomDivider:true
+    // }
 
     }
     

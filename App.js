@@ -3,15 +3,102 @@ import { StyleSheet, Text, View } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import { createAppContainer } from 'react-navigation';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
+import { createStackNavigator } from 'react-navigation-stack';
 
 //----screens import
 import MainScreen from "./src/screens/MainScreen"
 import SearchServerScreen from "./src/screens/SearchServerScreen"
+import AddNumberModal from "./src/screens/AddNumberModal"
+import ModalScreen from './src/screens/AddNumberModal';
 //--screen import end
 
+
+//create 2 seperate navigation stack
+const MainStack = createStackNavigator(
+  {
+
+    Home : MainScreen,
+    
+  
+  },
+  {
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: '#192f6a',
+        
+      },
+     
+
+      
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+    },
+
+  }
+   
+  
+
+
+);
+
+
+const SearchStack = createStackNavigator(
+  
+  {
+
+     
+      SearchServer:SearchServerScreen,
+      
+   
+  },
+
+  {
+    
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: '#192f6a',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+    },
+
+  }
+   
+  
+
+
+  )
+
+
+  const SearchStackWithModal = createStackNavigator(
+    {
+      Main:{
+        screen: SearchStack,
+      },
+      MyModal:{
+        screen: ModalScreen,
+      },
+    },
+    {
+      mode: 'modal',
+      headerMode: 'none',
+   
+    }
+  )
+
+
+
+
 const TabNavigator = createBottomTabNavigator({
-  MainScreen : MainScreen,
-  SearchServerScreen : SearchServerScreen,
+
+  Home : MainStack,
+  SearchServer:SearchStackWithModal,
+
+  
 },
   {
     defaultNavigationOptions:({ navigation }) => ({
@@ -22,10 +109,10 @@ const TabNavigator = createBottomTabNavigator({
         let iconName;
 
 
-        if(routeName === 'MainScreen'){
+        if(routeName === 'Home'){
           iconName = "address-book";
         }
-        else if(routeName === 'SearchServerScreen'){
+        else if(routeName === 'SearchServer'){
           iconName = "search";
         }
 
@@ -44,6 +131,8 @@ const TabNavigator = createBottomTabNavigator({
   }
 
 );
+
+
 
 const AppContainer = createAppContainer(TabNavigator)
 
