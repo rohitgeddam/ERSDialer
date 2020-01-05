@@ -27,12 +27,12 @@ $ npm start
  - Add SQLite database for local and faster storeage and retrival of contacts
  - Improve UI
 
-### Screenshots
+# Screenshots
 
-# Search Screen
+### Search Screen
 ![Alt text](/screenshots/Screenshot_1578208071.png?raw=true "Optional Title")
 
-# Add new contact to firebase database
+### Add new contact to firebase database
 ![Alt text](/screenshots/Screenshot_1578207992.png?raw=true "Optional Title")
 
 
