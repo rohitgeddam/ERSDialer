@@ -5,71 +5,84 @@ import { ThemeProvider ,Button,SearchBar,ListItem} from 'react-native-elements'
 import {Header} from 'react-native-elements'
 import TouchableScale from 'react-native-touchable-scale';
 const list = [
-    {
-      name: 'Amy Farha',
-      avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
-      subtitle: 'Vice President'
-    },
-    {
-      name: 'Chris Jackson',
-      avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
-      subtitle: 'Vice Chairman'
+    // {
+    //   name: 'Amy Farha',
+    //   avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+    //   subtitle: 'Vice President',
+    //   phoneNumber:6266218189
+    // },
+    // {
+    //   name: 'Chris Jackson',
+    //   avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+    //   subtitle: 'Vice Chairman',
+    //   phoneNumber:6266218189
 
-    },
-    {
-        name: 'Amy Farha',
-        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
-        subtitle: 'Vice President'
-      },
-      {
-        name: 'Chris Jackson',
-        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
-        subtitle: 'Vice Chairman'
-      },
-      {
-        name: 'Amy Farha',
-        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
-        subtitle: 'Vice President'
-      },
-      {
-        name: 'Chris Jackson',
-        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
-        subtitle: 'Vice Chairman'
-      },
-      {
-          name: 'Amy Farha',
-          avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
-          subtitle: 'Vice President'
-        },
-        {
-          name: 'Chris Jackson',
-          avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
-          subtitle: 'Vice Chairman'
-        },   {
-            name: 'Chris Jackson',
-            avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
-            subtitle: 'Vice Chairman'
-          },
-          {
-            name: 'Amy Farha',
-            avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
-            subtitle: 'Vice President'
-          },
-          {
-            name: 'Chris Jackson',
-            avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
-            subtitle: 'Vice Chairman'
-          },
-          {
-              name: 'Amy Farha',
-              avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
-              subtitle: 'Vice President'
-            },
-            {
-              name: 'Chris Jackson',
-              avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
-              subtitle: 'Vice Chairman'
-            },
+    // },
+    // {
+    //     name: 'Amy Farha',
+    //     avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+    //     subtitle: 'Vice President',
+    //     phoneNumber:6266218189
+    //   },
+    //   {
+    //     name: 'Chris Jackson',
+    //     avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+    //     subtitle: 'Vice Chairman',
+    //     phoneNumber:6266218189
+    //   },
+    //   {
+    //     name: 'Amy Farha',
+    //     avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+    //     subtitle: 'Vice President',
+    //     phoneNumber:6266218189
+    //   },
+    //   {
+    //     name: 'Chris Jackson',
+    //     avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+    //     subtitle: 'Vice Chairman',
+    //     phoneNumber:6266218189
+    //   },
+    //   {
+    //       name: 'Amy Farha',
+    //       avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+    //       subtitle: 'Vice President',
+    //       phoneNumber:6266218189
+    //     },
+    //     {
+    //       name: 'Chris Jackson',
+    //       avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+    //       subtitle: 'Vice Chairman',
+    //       phoneNumber:6266218189
+    //     },   {
+    //         name: 'Chris Jackson',
+    //         avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+    //         subtitle: 'Vice Chairman',
+    //         phoneNumber:6266218189
+    //       },
+    //       {
+    //         name: 'Amy Farha',
+    //         avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+    //         subtitle: 'Vice President',
+    //         phoneNumber:6266218189
+    //       },
+    //       {
+    //         name: 'Chris Jackson',
+    //         avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+    //         subtitle: 'Vice Chairman',
+    //         phoneNumber:6266218189
+    //       },
+    //       {
+    //           name: 'Amy Farha',
+    //           avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+    //           subtitle: 'Vice President',
+    //           phoneNumber:6266218189
+    //         },
+    //         {
+    //           name: 'Chris Jackson',
+    //           avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+    //           subtitle: 'Vice Chairman',
+    //           phoneNumber:6266218189
+    //         },
     
   ]
 
@@ -139,6 +152,13 @@ export default class MainScreen extends React.Component{
                                         start: [1, 0],
                                         end: [0.2, 0],
                                     }}
+                                    // onPress={()=> }
+                                    onPress={() => this.props.navigation.navigate('Detail',{
+                                      name:l.name,
+                                      icon:l.avatar_url,
+                                      subtitle:l.subtitle,
+                                      phoneNumber:l.phoneNumber,
+                                    })}
                                     //   ViewComponent={LinearGradient} // Only if no expo
                                     styles={{margin:4}}
                                     leftAvatar={{ rounded: true, source: { uri: l.avatar_url } }}
