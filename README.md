@@ -28,5 +28,12 @@ $ npm start
  - Improve UI
 
 ### Screenshots
+
+# Search Screen
+![Alt text](/screenshots/Screenshot_1578208071.png?raw=true "Optional Title")
+
 # Add new contact to firebase database
 ![Alt text](/screenshots/Screenshot_1578207992.png?raw=true "Optional Title")
+
+
+
